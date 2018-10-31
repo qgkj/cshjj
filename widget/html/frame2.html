@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>福利</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/auislide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <style>
+    html body{
+       background:url(../image/bg.png);
+       background-size:100% 100%;
+       background-repeat:no-repeat;
+    }
+    </style>
+</head>
+<body>
+<img id="imgh" src="" width="100%" height="100%"  onclick="javascript:location.href='https://www.baidu.com'">
+</body>
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+apiready = function() {
+  var api_url = localStorage.getItem('api_url');
+  // alert(api_url);
+
+  api.ajax({
+      url: api_url + '/login/login/image.html',
+      method: 'post',
+      data: {
+          values: {
+              name: 'haha'
+          }
+      }
+  },function(ret, err){
+      if (ret) {
+          // alert( ret[0].image );
+          $api.attr($api.byId('imgh'), 'src', ret[0].image);
+          $api.attr($api.byId('imgh'), 'href', ret[0].url);
+      } else {
+          // alert( JSON.stringify( err ) );
+          api.toast({
+              msg: '网络错误',
+              duration: 2000,
+              location: 'bottom'
+          });
+
+      }
+  });
+
+}
+</script>
+
+
+
+
+
+</html>

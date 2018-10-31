@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>福利</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/aui.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/auislide.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <script type="text/javascript" src="../script/aui-collapse.js" ></script>
+
+    <style>
+    html body{
+       background:url(../image/bg.png);
+       background-size:100% 100%;
+       background-repeat:no-repeat;
+    }
+    section{
+      padding: 8px;
+
+    }
+    </style>
+</head>
+<body>
+  <section>
+      <ul class="aui-list aui-collapse aui-border">
+          <div class="aui-collapse-item">
+              <li class="aui-list-item aui-collapse-header" tapmode>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title">在哪里获得激活卡？</div>
+                      <div class="aui-list-item-right">
+                          <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+                      </div>
+                  </div>
+              </li>
+              <div class="aui-collapse-content aui-padded-15 aui-border-b" style="color:yellow;">
+                激活卡是通过线上渠道发出的电子码，或通过线下渠道发出的实物卡片，可咨询邀请你的人获取。
+              </div>
+          </div>
+          <div class="aui-collapse-item">
+              <li class="aui-list-item aui-collapse-header" tapmode>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title">如何申请推广代理？</div>
+                      <div class="aui-list-item-right">
+                          <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+                      </div>
+                  </div>
+              </li>
+              <div class="aui-collapse-content aui-padded-15 aui-border-b" style="color:yellow;">
+                  我们的团队由技术部+推广部构成，其主力都在技术研发上，推广全部通过代理来完成。
+              </div>
+          </div>
+          <div class="aui-collapse-item">
+              <li class="aui-list-item aui-collapse-header" tapmode>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title">遇到各类小问题如何处理？</div>
+                      <div class="aui-list-item-right">
+                          <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+                      </div>
+                  </div>
+              </li>
+              <div class="aui-collapse-content aui-padded-15 aui-border-b" style="color:yellow;">
+                  关闭软件重新打开，退出用户重新登录，可解决常见小故障。
+              </div>
+          </div>
+          <div class="aui-collapse-item">
+              <li class="aui-list-item aui-collapse-header" tapmode>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title">无法激活和延长观看权限?</div>
+                      <div class="aui-list-item-right">
+                          <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+                      </div>
+                  </div>
+              </li>
+              <div class="aui-collapse-content aui-padded-15 aui-border-b" style="color:yellow;">
+                当用户观看权限没有到期时，无法延长权限时间，需等到用户不在具备观看权限时，才可以再次延长，激活权限。
+              </div>
+          </div>
+          <div class="aui-collapse-item">
+              <li class="aui-list-item aui-collapse-header" tapmode>
+                  <div class="aui-list-item-inner">
+                      <div class="aui-list-item-title">有一部分影视无法观看？</div>
+                      <div class="aui-list-item-right">
+                          <i class="aui-iconfont aui-icon-down aui-collapse-arrow"></i>
+                      </div>
+                  </div>
+              </li>
+              <div class="aui-collapse-content aui-padded-15 aui-border-b" style="color:yellow;">
+                小部分影视属第三方收费且需求单独购买观看，这类影视不属于第三方VIP观看范围内，所以无法观看。
+              </div>
+          </div>
+      </ul>
+  </section>
+</body>
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+apiready = function() {
+  var api_url = localStorage.getItem('api_url');
+  // alert(api_url);
+
+  var collapse = new auiCollapse({
+      autoHide:false //是否自动隐藏已经展开的容器
+  });
+
+}
+</script>
+
+
+
+
+
+</html>
