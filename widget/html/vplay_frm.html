@@ -81,7 +81,7 @@
 
         var player = cyberplayer("playercontainer").setup({
             width: api.winWidth,
-            height: api.winHeight,
+            height: api.winHeight - 64,
             file: api.pageParam.video, // <—rtmp or flv直播地址
             fallbackfile: api.pageParam.video, // <— 备用播放地址，为了手机上能进行直播，设置hls直播流
             controlbar: {

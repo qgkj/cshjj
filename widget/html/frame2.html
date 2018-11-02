@@ -8,6 +8,7 @@
     <title>title</title>
     <link rel="stylesheet" type="text/css" href="../css/base.css">
     <link rel="stylesheet" href="../css/zhibo.css">
+    <link rel="stylesheet" href="../css/aui.css">
     <style>
         /*新加空提示信息*/
 
@@ -41,7 +42,7 @@
 
 
 
-    <div class="aui-tab" style=" background: #fff; ">
+    <!-- <div class="aui-tab" style=" background: #fff; ">
         <div class="tab-panel">
             <div class="tab-panel-item tab-active">
                 <div class="tab-item">
@@ -68,64 +69,29 @@
 
 
         </div>
-    </div>
+    </div> -->
 
 
 
     <div class="wrap">
         <div class="game-page">
-
-
-
-            <!-- 视频列表 -->
-            <div class="v-list-wrap" id="liveList">
-                <ul class="clearfix" id="div_list">
-
-
-                    <!--加载提示-->
-                    <section class="m-noRecord">
-                        <div class="c-icon-noRecord"></div>
-                        <div class="c-info">奋力加载中...</div>
-                    </section>
-                    <!--加载提示-->
-
-                    <!--
-                <li onclick="openWin('{{= value. url }}')">
-                  <div class="video-mask-box">
-                    <img src="{{= value. img }}" alt="" class="game-pic">
-                  </div>
-              <em class="aui-group-three" style=" font-size: 12px; "> {{= value. title }}</em>
-                </li>
-
--->
-
-                </ul>
-            </div>
+            <section class="aui-grid v-list-wrap" id="liveList">
+                <div class="aui-row clearfix" id="div_list">
+                  <section class="m-noRecord">
+                      <div class="c-icon-noRecord"></div>
+                      <div class="c-info">奋力加载中...</div>
+                  </section>
+                </div>
+            </section>
             <!-- 视频列表 end-->
 </body>
 <script type="text/x-dot-template" id="template">
     {{~ it.msg : value : index }}
-
-
-    <li onclick="openWin('{{= value. url }}')">
-        <div class="video-mask-box">
-            <img src="{{= value. img }}" alt="" class="game-pic">
-        </div>
-        <em class="aui-group-three" style=" font-size: 12px; "> {{= value. title }}</em>
-    </li>
-
-    /*
-    <li onclick="openWin('{{= value. url }}')">
-        <div class="game-a">
-            <img src="{{= value. img }}" alt="">
-            <em class="aui-group-three" style=" font-size: 12px; "> {{= value. title }}</em>
-            <p>
-                <em class="aui-group-one" style=" font-size: 12px; ">主播：</em> <em class="aui-group-two" style=" font-size: 12px; ">{{= value. nickname }}</em>
-            </p><br>
-        </div>
-    </li>
-
-    */ {{~}}
+      <div class="aui-col-xs-6" onclick="openWin('{{= value. url }}')" style="margin-bottom:-25px;">
+          <img src="{{= value. img }}" style="width:90%;height:120px;" class="game-pic">
+          <div class="aui-grid-label" style=" font-size: 12px;color:#000;margin-top:15px; ">{{= value. title }}</div>
+      </div>
+    {{~}}
 </script>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript" src="../script/doT.js"></script>
