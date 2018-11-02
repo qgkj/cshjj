@@ -67,12 +67,11 @@
 </body>
 <script type="text/x-dot-template" id="template">
 {{~ it.msg : value : index }}
-    <li onclick="openWin('{{= value. url }}')">
+    <li onclick="openWin('{{= value.url }}')">
       <div class="video-mask-box">
         <img src="{{= value. img }}" alt="" class="game-pic">
       </div>
       <div class="til">{{= value. title }}</div>
-
     </li>
 {{~}}
 </script>
@@ -92,7 +91,7 @@
   /////  初始化执行   S /////
   /////  apiready  一打开就执行的 函数
   apiready = function(){
-
+// alert(1);
     ////加载播放器  s  /////
     var player = cyberplayer("playercontainer").setup({
         width: api.winWidth,
